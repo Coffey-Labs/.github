@@ -1,7 +1,7 @@
 # Coffey Labs
 
-Open-source infrastructure — mail, observability, and the systems tooling
-around them. **Copyleft-licensed without exception:** every project here is
+Open-source infrastructure — mail, observability, VPN, and the systems
+tooling around them. **Copyleft-licensed without exception:** every project here is
 GPLv3 or AGPLv3, including the parts other projects would hold back.
 
 🌐 [coffeylabs.org](https://coffeylabs.org)
@@ -26,6 +26,24 @@ PWA with Web Push, and nine interface languages beyond English. Requires
 Stalwart 0.16 or newer.
 
 [Live demo](https://demo.ihasmail.com) · [ihasmail.org](https://ihasmail.org) · [docs.ihasmail.org](https://docs.ihasmail.org)
+
+---
+
+### 🔐 [WGX](https://github.com/Coffey-Labs/WGX) &nbsp;·&nbsp; Go + TypeScript &nbsp;·&nbsp; AGPL-3.0
+
+**A WireGuard server with a secure web console, in one container.**
+
+Peers with QR codes and `.conf` downloads, who is connected and how much they
+move, disconnect and session reset with a click, key rotation, expiry, and
+client-supplied keys for devices that keep their own. The tunnel runs on the
+kernel's WireGuard module over netlink, with nftables NAT, TCP MSS clamping and
+tuned sysctls, so it goes as fast as the host allows; wireguard-go is the
+fallback where the module is missing. argon2id passwords, two-factor with
+recovery codes, viewer and administrator roles, an audit log and Prometheus
+metrics. One static binary and one SQLite file; nothing else to run.
+
+A ground-up rewrite of the 2025 WGX installer ("WireGuard eXtended"), which
+was Bash scripts behind a text-mode menu; nothing of it was kept but the name.
 
 ---
 
@@ -103,6 +121,7 @@ managers and rollback.
 | Project | Licence |
 |---|---|
 | ihasmail | AGPL-3.0-or-later |
+| WGX | AGPL-3.0-or-later |
 | cairnobs | AGPL-3.0-or-later (including `enterprise/`) |
 | stalwart-migrator | GPL-3.0 |
 | SysAdminAutomation | GPL-3.0 |
