@@ -42,6 +42,8 @@ fallback where the module is missing. argon2id passwords, two-factor with
 recovery codes, viewer and administrator roles, an audit log and Prometheus
 metrics. One static binary and one SQLite file; nothing else to run.
 
+[ihasvpn.org](https://ihasvpn.org)
+
 ---
 
 ### 📊 [cairnobs](https://github.com/Coffey-Labs/cairnobs) &nbsp;·&nbsp; Go + Rust &nbsp;·&nbsp; AGPL-3.0
