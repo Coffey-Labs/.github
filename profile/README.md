@@ -66,6 +66,28 @@ or docker-compose. The `enterprise/` directory is AGPLv3 like everything else.
 
 ---
 
+### 🚀 [ihasmail-oneshot](https://github.com/Coffey-Labs/ihasmail-oneshot) &nbsp;·&nbsp; Go &nbsp;·&nbsp; AGPL-3.0
+
+**One command that turns a Linux Docker host into a working mail server with
+webmail.**
+
+Deploys a fresh Stalwart and a fresh ihasmail behind Caddy, links them, gets
+them certificates, and hands you the administrator password and the DNS records
+to publish. Along the way it completes Stalwart's bootstrap through its API
+without leaving the one-time credential behind, gives Stalwart its own ACME
+account so it doesn't fight Caddy for port 443, and stops one scanning bot from
+getting the proxy banned for everyone. It checks the host before changing
+anything and proves the link by signing in through the webmail before calling
+itself done.
+
+A single static binary for amd64 and arm64, standard library only. `--local`
+gives a loopback-only stack for trying ihasmail against a real Stalwart; what
+it leaves behind is an ordinary `docker compose` project, not tied to the tool.
+
+[Releases](https://github.com/Coffey-Labs/ihasmail-oneshot/releases/latest)
+
+---
+
 ### 🔧 [stalwart-migrator](https://github.com/Coffey-Labs/stalwart-migrator) &nbsp;·&nbsp; Go &nbsp;·&nbsp; GPL-3.0
 
 **In-place upgrade tooling for Stalwart Mail Server, 0.15.5 → latest.**
@@ -122,6 +144,7 @@ managers and rollback.
 | ihasmail | AGPL-3.0-or-later |
 | ihasvpn | AGPL-3.0-or-later |
 | cairnobs | AGPL-3.0-or-later (including `enterprise/`) |
+| ihasmail-oneshot | AGPL-3.0-or-later |
 | stalwart-migrator | GPL-3.0 |
 | SysAdminAutomation | GPL-3.0 |
 | ubuntu2mint | GPL-3.0 |
