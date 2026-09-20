@@ -4,11 +4,26 @@ Open-source infrastructure — mail, observability, VPN, and the systems
 tooling around them. **Copyleft-licensed without exception:** every project here is
 GPLv3 or AGPLv3, including the parts other projects would hold back.
 
-🌐 [coffeylabs.org](https://coffeylabs.org)
+🌐 [coffeylabs.org](https://coffeylabs.org) &nbsp;·&nbsp; also at [@inbuxa](https://github.com/inbuxa)
 
 ---
 
 ## Projects
+
+### 📦 [INBUXA](https://github.com/inbuxa) &nbsp;·&nbsp; Rust + TypeScript &nbsp;·&nbsp; AGPL-3.0
+
+**A complete mail system you run yourself** — the server, its administration
+console and its webmail, installed and versioned together, with every feature
+in the one edition and no license key anywhere in the code.
+
+Built here, but kept in **[its own organization](https://github.com/inbuxa)**:
+it is three repositories that ship as one thing, and they belong next to each
+other rather than scattered through this list. Same people, same license, same
+rule about no gated features.
+
+[inbuxa.org](https://inbuxa.org) · [docs.inbuxa.org](https://docs.inbuxa.org) · [github.com/inbuxa](https://github.com/inbuxa)
+
+---
 
 ### 📬 [ihasmail](https://github.com/Coffey-Labs/ihasmail) &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; AGPL-3.0
 
@@ -139,7 +154,7 @@ managers and rollback.
 
 ## Licensing
 
-| Project | Licence |
+| Project | License |
 |---|---|
 | ihasmail | AGPL-3.0-or-later |
 | ihasvpn | AGPL-3.0-or-later |
@@ -149,5 +164,8 @@ managers and rollback.
 | SysAdminAutomation | GPL-3.0 |
 | ubuntu2mint | GPL-3.0 |
 
+The [INBUXA](https://github.com/inbuxa) repositories are AGPL-3.0 too, and
+carry their own table in that organization's profile.
+
 Copyleft without exception — no open-core carve-outs, no source-available
-licences, no relicensed "enterprise" tier.
+licenses, no relicensed "enterprise" tier.
