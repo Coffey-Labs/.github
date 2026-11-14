@@ -61,7 +61,7 @@ metrics. One static binary and one SQLite file; nothing else to run.
 
 ---
 
-### 📊 [cairnobs](https://github.com/Coffey-Labs/cairnobs) &nbsp;·&nbsp; Go + Rust &nbsp;·&nbsp; AGPL-3.0
+### 📊 [cairnobs](https://cairnobs.org) &nbsp;·&nbsp; Go + Rust &nbsp;·&nbsp; AGPL-3.0
 
 **Open-core, Kubernetes-native log aggregation and observability.**
 
