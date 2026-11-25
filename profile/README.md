@@ -1,7 +1,7 @@
 # Coffey Labs
 
-Open-source infrastructure — mail, observability, VPN, and the systems
-tooling around them. **Copyleft-licensed without exception:** every project here is
+Open-source infrastructure — mail, monitoring, VPN, websites, and the
+systems tooling around them. **Copyleft-licensed without exception:** every project here is
 GPLv3 or AGPLv3, including the parts other projects would hold back.
 
 🌐 [coffeylabs.org](https://coffeylabs.org) &nbsp;·&nbsp; also at [@inbuxa](https://github.com/inbuxa)
@@ -10,14 +10,14 @@ GPLv3 or AGPLv3, including the parts other projects would hold back.
 
 ## Projects
 
-### 📦 [INBUXA](https://github.com/inbuxa) &nbsp;·&nbsp; Rust + TypeScript &nbsp;·&nbsp; AGPL-3.0
+### 📦 [inbuxa](https://github.com/inbuxa) &nbsp;·&nbsp; Rust + TypeScript &nbsp;·&nbsp; AGPL-3.0
 
 **A complete mail system you run yourself** — the server, its administration
 console and its webmail, installed and versioned together, with every feature
 in the one edition and no license key anywhere in the code.
 
 Built here, but kept in **[its own organization](https://github.com/inbuxa)**:
-it is three repositories that ship as one thing, and they belong next to each
+it is several repositories that ship as one thing, and they belong next to each
 other rather than scattered through this list. Same people, same license, same
 rule about no gated features.
 
@@ -37,10 +37,9 @@ JMAP Files rather than the browser, so the app itself stays stateless.
 
 Three-pane conversation view with Gmail search operators and shortcuts, a
 recurrence- and free-busy-aware calendar, vCard import/export, an installable
-PWA with Web Push, and nine interface languages beyond English. Requires
-Stalwart 0.16 or newer.
+PWA with Web Push, and a translated interface. Requires Stalwart 0.16 or newer.
 
-[Live demo](https://demo.ihasmail.com) · [ihasmail.org](https://ihasmail.org) · [docs.ihasmail.org](https://docs.ihasmail.org)
+[Live demo](https://demo.inbuxa.org) · [ihasmail.org](https://ihasmail.org) · [docs.ihasmail.org](https://docs.ihasmail.org)
 
 ---
 
@@ -61,23 +60,32 @@ metrics. One static binary and one SQLite file; nothing else to run.
 
 ---
 
-### 📊 [cairnobs](https://cairnobs.org) &nbsp;·&nbsp; Go + Rust &nbsp;·&nbsp; AGPL-3.0
+### 📊 [Cairn OBS](https://github.com/Coffey-Labs/cairnobs) &nbsp;·&nbsp; Go + Svelte &nbsp;·&nbsp; AGPL-3.0
 
-**Open-core, Kubernetes-native log aggregation and observability.**
+**Self-hosted monitoring for networks, hosts, services and clusters.**
 
-Built to match Splunk on capability while winning on cost-per-GB, with honest
-multi-tenant RBAC. Logs flow from a statically-linked Rust edge agent through
-Redpanda into a Go ingest pipeline, landing in ClickHouse for analytics and
-Tantivy for full-text search — one query language spanning both stores,
-compiling to a single execution plan, with raw ClickHouse SQL as an escape
-hatch onto the same IR.
+An agent on each host reports to one server, which judges the readings, draws
+the maps from what is actually running, sends the alerts and writes the
+reports. It reads and never changes anything, and it runs on your own
+hardware, from a single container to a cluster watching thousands of VMs and
+pods. Hosts, checks, clusters, hypervisors, storage arrays, IBM i and Windows
+servers, with nothing held back for a paid tier.
 
-On top: dashboards, a threshold-and-absence alerting evaluator, a `cairnobsctl`
-CLI, a Terraform provider, and AI-assisted query authoring that runs against a
-self-hosted Ollama model by default. Ships as a Kubernetes Operator, Helm chart
-or docker-compose. The `enterprise/` directory is AGPLv3 like everything else.
+[cairnobs.org](https://cairnobs.org) · [Live demo](https://demo.cairnobs.org) · [docs.cairnobs.org](https://docs.cairnobs.org)
 
-[cairnobs.org](https://cairnobs.org)
+---
+
+### 🌭 [HotDog CMS](https://github.com/Coffey-Labs/hotdog-cms) &nbsp;·&nbsp; Go &nbsp;·&nbsp; AGPL-3.0
+
+**A website builder: write in Markdown, see it live, publish from git.**
+
+For people who want a fast, safe site without babysitting a server. Pages are
+plain files, every change is a commit, and the public site is nothing but
+pages. The editor previews as you type and works with any git platform; the
+build publishes anywhere static files can be served. The Coffey Labs sites
+run on it.
+
+[hotdogcms.org](https://hotdogcms.org) · [Docs](https://hotdogcms.org/docs/)
 
 ---
 
@@ -158,13 +166,14 @@ managers and rollback.
 |---|---|
 | ihasmail | AGPL-3.0-or-later |
 | ihasvpn | AGPL-3.0-or-later |
-| cairnobs | AGPL-3.0-or-later (including `enterprise/`) |
+| Cairn OBS | AGPL-3.0 |
+| HotDog CMS | AGPL-3.0-or-later |
 | ihasmail-oneshot | AGPL-3.0-or-later |
 | stalwart-migrator | GPL-3.0 |
 | SysAdminAutomation | GPL-3.0 |
 | ubuntu2mint | GPL-3.0 |
 
-The [INBUXA](https://github.com/inbuxa) repositories are AGPL-3.0 too, and
+The [inbuxa](https://github.com/inbuxa) repositories are AGPL-3.0 too, and
 carry their own table in that organization's profile.
 
 Copyleft without exception — no open-core carve-outs, no source-available
